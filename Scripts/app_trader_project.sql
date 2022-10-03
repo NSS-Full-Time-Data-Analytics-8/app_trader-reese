@@ -21,5 +21,5 @@ SELECT distinct *
 FROM play_store_apps
 INNER JOIN app_store_apps
 USING (name)
---rating is ambiguous?
-WHERE rating >4;
+WHERE play_store_apps.rating >4
+AND app_store_apps.rating >4;
